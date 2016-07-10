@@ -142,7 +142,7 @@ public class ChessLogicUtils {
         }
         
         if (move.moveResult == MoveResult.castling){
-            let king = board[start.0][start.1].piece
+            _ = board[start.0][start.1].piece
             
           //  if (!(king is King)){
             //    return nil

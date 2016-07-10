@@ -66,7 +66,7 @@ class ThemeViewController: UIViewController {
             currentPiece = UserData.getPiece()
         }
         if boardView != nil {
-            var nextPiece = Theme.getNextPiece(currentPiece)
+            let nextPiece = Theme.getNextPiece(currentPiece)
             boardView.changePieceStype(nextPiece)
             currentPiece = nextPiece
             let puzzle = Puzzle(FEN: "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", computerMove: "", solution: "e4", idea: "Nakamura - Magnus Carslen 2015", elo: 1480, id: 2)
@@ -83,7 +83,7 @@ class ThemeViewController: UIViewController {
             currentBoard = UserData.getBoard()
         }
         if boardView != nil {
-            var nextBoard = Theme.getNextBoard(currentBoard)
+            let nextBoard = Theme.getNextBoard(currentBoard)
             boardView.boardStyle = nextBoard
             currentBoard = nextBoard
             imageView.image = UIImage(named: nextBoard + "_bg")

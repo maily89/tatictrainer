@@ -148,7 +148,7 @@ class BoardView: UIView {
                 
                 flip = !flip
                 
-                let squareTapGesture = UITapGestureRecognizer(target: self, action: "squareTapView:")
+                let squareTapGesture = UITapGestureRecognizer(target: self, action: #selector(BoardView.squareTapView(_:)))
                 
                 square.addGestureRecognizer(squareTapGesture)
                 square.userInteractionEnabled = true

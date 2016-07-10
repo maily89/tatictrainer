@@ -97,7 +97,8 @@ public class Piece {
         //check quan bi vuong
         if (start.0 == dest.0){ // di chuyen theo hang ngang
             if (start.1 > dest.1) {// di chuyen sang trai
-                for var index = (start.1 - 1); index > dest.1 ; index -= 1 {
+                for index in (start.1 - 1).stride(to: dest.1, by: -1){
+                    //var index = (start.1 - 1); index > dest.1 ; index -= 1 {
                     if (!board[dest.0][index].isEmpty()){
                         return false;
                     }
@@ -115,7 +116,8 @@ public class Piece {
         
         if (start.1 == dest.1){ // di chuyen theo hang doc
             if (start.0 > dest.0) {// di chuyen len tren
-                for var index = (start.0 - 1); index > dest.0 ; --index {
+                for index in (start.0 - 1).stride(to: dest.0, by: -1){
+                    //var index = (start.0 - 1); index > dest.0 ; index -= 1
                     if (!board[index][dest.1].isEmpty()){
                         return false;
                     }

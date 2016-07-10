@@ -237,7 +237,7 @@ class GameViewController: UIViewController, PrintEventDelegate, UpdateStatusDele
             if(!lockELO) {
                 lockELO = true
                 let eloChange = ELOUtils.calculateELOChange(UserData.getScore(), rating2: elo, winLoseDraw: 0, numOfGamesPlayed: UserData.getNumOfGames(), moveNum: moveNum)
-                var symbol = "+"
+                _ = "+"
                 
                 score += eloChange
                 //eloLabel.textColor = UIColor.redColor()
